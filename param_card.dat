@@ -73,6 +73,10 @@ DECAY  25 5.753088e-03 # WH
 DECAY 3200111 1.000000e+00 # WTh 
 DECAY 3200112 1.000000e+00 # WPh 
 DECAY 3200211 9.800000e+01 # WGp 
+
+#          BR         NDA      ID1       ID2
+    9.792636e-01          2         21        21   # BR( theta  >   gluon gluon)
+
 ## Dependent parameters, given by model restrictions.
 ## Those values should be edited following the 
 ## analytical expression. MG5 ignores those values 
