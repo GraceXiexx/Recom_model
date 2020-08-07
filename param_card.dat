@@ -70,13 +70,34 @@ DECAY  14 1.000000e-01 # Wv2
 DECAY  23 2.441404e+00 # WZ 
 DECAY  24 2.047600e+00 # WW 
 DECAY  25 5.753088e-03 # WH 
-DECAY 3200111 1.000000e+00 # WTh 
-DECAY 3200112 1.000000e+00 # WPh 
-DECAY 3200211 9.800000e+01 # WGp 
-
+DECAY 9200110 7.233906e-03 # WTh 
 #          BR         NDA      ID1       ID2
     9.792636e-01          2         21        21   # BR( theta  >   gluon gluon)
-
+#          BR         NDA      ID1       ID2       ID3
+    3.456062e-03         3         1        -1     9200111 # BR( theta  >   d   dbar  phiI)
+    3.456062e-03         3         2        -2     9200111 # BR( theta  >   u   ubar  phiI)
+    3.456062e-03         3         3        -3     9200111 # BR( theta  >   s   sbar  phiI)
+    3.456062e-03         3         4        -4     9200111 # BR( theta  >   c   cbar  phiI)
+    3.456062e-03         3         5        -5     9200111 # BR( theta  >   b   bbar  phiI)
+    3.456062e-03         3         6        -6     9200111 # BR( theta  >   t   tbar  phiI)
+DECAY 9200111 4.285541e-12 # WPh 
+#          BR         NDA      ID1       ID2       ID3       ID4
+    1.666667e-01         4         21         21         1        -1 # BR( phiI >   d   dbar  g   g)
+    1.666667e-01         4         21         21         2        -2 # BR( phiI >   u   ubar  g   g)
+    1.666667e-01         4         21         21         3        -3 # BR( phiI >   s   sbar  g   g)
+    1.666667e-01         4         21         21         4        -4 # BR( phiI >   c   cbar  g   g)
+    1.666667e-01         4         21         21         5        -5 # BR( phiI >   b   bbar  g   g)
+    1.666667e-01         4         21         21         6        -6 # BR( phiI >   b   bbar  theta)
+DECAY 9200210 1.279155e+01 # WGp 
+#          BR         NDA      ID1       ID2
+    0.000000e+00          2         9200110        9200110   # BR( gp  >   theta theta)
+    0.000000e+00          2         9200110        9200111   # BR( gp  >   theta phiI)
+    1.669352e-01         2         1        -1      # BR( gp  >   d   dbar  )
+    1.669352e-01         2         2        -2      # BR( gp  >   u   ubar  )
+    1.669352e-01         2         3        -3      # BR( gp  >   s   sbar  )
+    1.669351e-01         2         4        -4      # BR( gp  >   c   cbar  )
+    1.669343e-01         2         5        -5      # BR( gp  >   b   bbar  )
+    1.653250e-01         2         6        -6      # BR( gp  >   t   tbar  )
 ## Dependent parameters, given by model restrictions.
 ## Those values should be edited following the 
 ## analytical expression. MG5 ignores those values 
