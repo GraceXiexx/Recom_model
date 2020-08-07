@@ -87,11 +87,12 @@ DECAY 9200111 4.285541e-12 # WPh
     1.666667e-01         4         21         21         3        -3 # BR( phiI >   s   sbar  g   g)
     1.666667e-01         4         21         21         4        -4 # BR( phiI >   c   cbar  g   g)
     1.666667e-01         4         21         21         5        -5 # BR( phiI >   b   bbar  g   g)
-    1.666667e-01         4         21         21         6        -6 # BR( phiI >   b   bbar  theta)
+#    1.666667e-01         4         21         21         6        -6 # BR( phiI >   b   bbar  theta)
+    1.666667e-01         2         23       22 # BR( phiI >   z   a)
 DECAY 9200210 1.279155e+01 # WGp 
 #          BR         NDA      ID1       ID2
-    0.000000e+00          2         9200110        9200110   # BR( gp  >   theta theta)
-    0.000000e+00          2         9200110        9200111   # BR( gp  >   theta phiI)
+#    0.000000e+00          2         9200110        9200110   # BR( gp  >   theta theta)
+#    0.000000e+00          2         9200110        9200111   # BR( gp  >   theta phiI)
     1.669352e-01         2         1        -1      # BR( gp  >   d   dbar  )
     1.669352e-01         2         2        -2      # BR( gp  >   u   ubar  )
     1.669352e-01         2         3        -3      # BR( gp  >   s   sbar  )
