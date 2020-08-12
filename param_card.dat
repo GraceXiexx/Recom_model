@@ -31,8 +31,8 @@ Block mass
    16 1.000000e+00 # Mv3 
    23 9.118800e+01 # MZ 
    25 1.200000e+02 # MH 
-  3200111 1.000000e+02 # MTh 
-  3200112 1.000000e+02 # MPh 
+  3200111 1.000000e+03 # MTh 
+  3200112 3.000000e+02 # MPh 
   3200211 3.000000e+03 # MGp 
 ## Dependent parameters, given by model restrictions.
 ## Those values should be edited following the 
@@ -67,7 +67,7 @@ Block yukawa
 ###################################
 DECAY   6 1.508336e+00 # WT 
 DECAY  14 1.000000e-01 # Wv2 
-DECAY  23 2.441404e+00 # WZ
+DECAY  23 2.441404e+00 # WZ 
 #          BR         NDA      ID1       ID2
     0.000000e+00          2          1        -1   # BR( theta  >   d  dbar)
     0.000000e+00          2          2        -2   # BR( theta  >   u  ubar)
@@ -83,13 +83,11 @@ DECAY  23 2.441404e+00 # WZ
     0.000000e+00          2         16       -16   # BR( theta  >   vt vtbar)        
 DECAY  24 2.047600e+00 # WW 
 DECAY  25 5.753088e-03 # WH 
-DECAY 3200111 7.233906e-03 # WTh
-#          BR         NDA      ID1       ID2
+DECAY 3200111 7.233906e-03 # WTh 
     1.000000e+00          2         21        21   # BR( theta  >   gluon gluon) 
 DECAY 3200112 4.285541e-12 # WPh 
-#          BR         NDA      ID1       ID2      
     1.000000e+00          2         23       22 # BR( phiI >   z   a)
-DECAY 3200211 1.279155e+01 # WGp 
+DECAY 3200211 1.000000e+01 # WGp 
 ## Dependent parameters, given by model restrictions.
 ## Those values should be edited following the 
 ## analytical expression. MG5 ignores those values 
