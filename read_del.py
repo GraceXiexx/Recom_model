@@ -94,6 +94,7 @@ events = uproot.open(fileName)["Delphes"]
 #[b'Event', b'Event_size', b'Particle', b'Particle_size', b'Track', b'Track_size', b'Tower', b'Tower_size', b'EFlowTrack', b'EFlowTrack_size', b'EFlowPhoton', b'EFlowPhoton_size', b'EFlowNeutralHadron', b'EFlowNeutralHadron_size', b'GenJet', b'GenJet_size', b'GenMissingET', b'GenMissingET_size', b'Jet', b'Jet_size', b'Electron', b'Electron_size', b'Photon', b'Photon_size', b'Muon', b'Muon_size', b'FatJet', b'FatJet_size', b'MissingET', b'MissingET_size', b'ScalarHT', b'ScalarHT_size']
 
 z_mass = []
+pt_pass = []
 features = ['Electron.PT','Electron.Eta','Electron.Phi']
 
 #count = 0
@@ -116,11 +117,13 @@ for data in events.iterate(features, namedecode="utf-8"):
             m = invariant_m(pt, eta, phi)
 
             z_mass.append(m)
+            pt_pass += pt
             
             
-           
+plt.figure(1)           
 plt.hist(z_mass,bins = 200, range = (70,110))
-
+plt.figure(2)
+plt.hist(pt_pass,bins = 100)
 plt.show()            
             
             
