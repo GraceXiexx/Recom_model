@@ -59,19 +59,23 @@ def reorder(pt, eta, phi):
     eta_new = []
     phi_new = []
     
+
     a = pt.argmax()
     pt_new.append(pt[a])
     eta_new.append(eta[a])
     phi_new.append(phi[a])
-    np.delete(pt, a)
-    np.delete(eta, a)
-    np.delete(phi, a)
-
+    pt = np.delete(pt, a)
+    eta = np.delete(eta, a)
+    phi = np.delete(phi, a)
     
+
+        
     b = pt.argmax()
     pt_new.append(pt[b])
     eta_new.append(eta[b])
     phi_new.append(phi[b])
+    
+
     
     return pt_new, eta_new, phi_new
     
@@ -91,6 +95,9 @@ events = uproot.open(fileName)["Delphes"]
 
 z_mass = []
 features = ['Electron.PT','Electron.Eta','Electron.Phi']
+
+#count = 0
+
 for data in events.iterate(features, namedecode="utf-8"):
     
     pt_list = data['Electron.PT']
@@ -103,21 +110,24 @@ for data in events.iterate(features, namedecode="utf-8"):
         
         if len(pt_list[i]) >= 2:
             
+
+            
             pt, eta, phi = reorder(pt_list[i], eta_list[i], phi_list[i])
             m = invariant_m(pt, eta, phi)
+
             z_mass.append(m)
             
             
-            
-plt.hist(z_mass, bins = 200)
+           
+plt.hist(z_mass,bins = 200, range = (70,110))
 
 plt.show()            
-#            
-#            
-#            
-#            
-#
-#
+            
+            
+            
+            
+
+
 
             
             
